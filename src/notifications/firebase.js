@@ -27,5 +27,6 @@ export const generateToken = async ()=>{
             }
         )
         console.log(token)
+        return token;   
     }
 }

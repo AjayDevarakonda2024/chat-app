@@ -6,10 +6,11 @@ import { generateToken, messaging} from './notifications/firebase'
 import { onMessage } from 'firebase/messaging'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setToken] = useState("")
 
   useEffect(()=>{
-    generateToken();
+    const t = generateToken();
+    setToken(t)
     onMessage(messaging, (payload)=>{
       console.log(payload);
     })
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      <p>hello</p>
+      <p>{token}</p>
     </>
   )
 }
