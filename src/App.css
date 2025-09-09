@@ -1,0 +1,32 @@
+.app{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 50px;
+    background-color: lightgreen;
+}
+
+.header .you1 i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: darkgreen;
+}
+
+.header .you2 i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 3px darkgreen
+}
+
+.body{
+    height: calc(100vh - 50px);
+    position: relative;
+}

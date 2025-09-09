@@ -1,0 +1,35 @@
+.input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: lightgreen;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+}
+
+.input input{
+    height: 35px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+.input input:focus{
+    outline: none;
+    border: 3px solid darkgreen;
+}
+
+.input button{
+    height: 35px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: darkgreen;
+}
