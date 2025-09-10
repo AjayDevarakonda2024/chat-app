@@ -27,7 +27,7 @@
 }
 
 .body{
-    height: calc(100vh);
+    height: 100dvh;
     position: relative;
     overflow-y: hidden;
     scroll-behavior: smooth;
