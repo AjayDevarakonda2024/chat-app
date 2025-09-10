@@ -32,7 +32,33 @@ messaging.onBackgroundMessage((payload) => {
   const notificationOptions = {
     body: payload.notification.body,
     icon: payload.notification.image,
+    data: {
+      url: payload.fcmOptions?.link || "/", // ✅ Save target URL
+    },
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
+});
+
+// ✅ Handle notification clicks
+self.addEventListener("notificationclick", function (event) {
+  console.log("Notification click received:", event);
+
+  event.notification.close();
+
+  // Open app or focus existing tab
+  event.waitUntil(
+    clients.matchAll({ type: "window", includeUncontrolled: true }).then((clientList) => {
+      for (const client of clientList) {
+        // If app is already open, focus it
+        if (client.url === event.notification.data.url && "focus" in client) {
+          return client.focus();
+        }
+      }
+      // If app is not open, open it
+      if (clients.openWindow) {
+        return clients.openWindow(event.notification.data.url);
+      }
+    })
+  );
 });
