@@ -15,8 +15,8 @@ const Groups = ({setNavIcon, token})=>{
                 const res = await axios.post(
                     "https://chat-app-backend-2-hk56.onrender.com/notifications/send-to-all",
                     {
-                    "title": "New Message",
-                    "body": "Ajay sent a message!"
+                    "title": "user",
+                    "body": ref1.current.value
                     },
                     {
                         headers:{
@@ -26,6 +26,7 @@ const Groups = ({setNavIcon, token})=>{
 
                 )
                 console.log(res.data)
+                ref1.current.value = ""
             }
             catch(err){
                 console.log("error: ",err)
