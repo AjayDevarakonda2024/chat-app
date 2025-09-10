@@ -1,8 +1,4 @@
-.app{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
+
 
 .header{
     display: flex;
@@ -12,8 +8,9 @@
     width: 100%;
     height: 50px;
     background-color: lightgreen;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .header .you1 i{
@@ -30,8 +27,9 @@
 }
 
 .body{
-    height: calc(100vh - 50px);
+    height: calc(100vh);
     position: relative;
     overflow-y: hidden;
     scroll-behavior: smooth;
+    background-color: red;
 }
