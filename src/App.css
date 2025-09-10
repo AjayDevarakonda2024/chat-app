@@ -1,8 +1,8 @@
 .app{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
-    height: calc(100dvh - 50px);
 }
 
 .header{
