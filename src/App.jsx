@@ -37,9 +37,12 @@ function App() {
     })
   },[])
 
+  
+
   return (
     <>
     <BrowserRouter>
+      <div className='app'>
       <div className='header'>
         <Link to="/you" className={navIcon == "you"? "you1":"you2"} onClick={()=>setNavIcon("you")}><i className='fa fa-user'></i></Link>
         <Link to="/" className={navIcon == "groups"? "you1":"you2"} onClick={()=>setNavIcon("groups")}><i className='fa fa-group'></i></Link>
@@ -51,6 +54,7 @@ function App() {
             <Route path='/' element={<Groups setNavIcon={setNavIcon} token={token}></Groups>}></Route>
             <Route path='/menu' element={<Menu setNavIcon={setNavIcon}></Menu>}></Route>
           </Routes>
+        </div>
         </div>
     </BrowserRouter>
     </>
