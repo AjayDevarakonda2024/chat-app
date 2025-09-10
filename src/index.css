@@ -6,7 +6,9 @@
 
 body {
     overflow: hidden;
-    height: 100dvh;
     margin: 0;
     padding: 0;
+    border: 10px solid red;
+    position: sticky;
+    top: 0;
 }
