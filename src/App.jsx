@@ -40,12 +40,13 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <div className='app'>
+      
         <div className='header'>
           <Link to="/you" className={navIcon == "you"? "you1":"you2"} onClick={()=>setNavIcon("you")}><i className='fa fa-user'></i></Link>
           <Link to="/" className={navIcon == "groups"? "you1":"you2"} onClick={()=>setNavIcon("groups")}><i className='fa fa-group'></i></Link>
           <Link to="/menu" className={navIcon == "menu"? "you1":"you2"} onClick={()=>setNavIcon("menu")}><i className='fa fa-bars'></i></Link>
         </div>
+      <div className='app'>
         <div className='body'>
           <Routes>
             <Route path='/you' element={<You setNavIcon={setNavIcon}></You>}></Route>

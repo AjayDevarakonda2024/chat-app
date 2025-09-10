@@ -39,9 +39,7 @@ const Groups = ({setNavIcon, token})=>{
         },[])
     return(
         <>
-        <div className="input">
             <input type="text" ref={ref1} placeholder="enter message.."></input> <button onClick={message}>send</button>
-        </div>
         </>
     )
 }
