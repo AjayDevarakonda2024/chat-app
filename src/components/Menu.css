@@ -1,0 +1,7 @@
+.Menu{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    height: 100%;
+}

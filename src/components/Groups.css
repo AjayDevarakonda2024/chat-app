@@ -20,6 +20,7 @@ button{
     border: none;
     background-color: darkgreen;
     color: white;
+    cursor: pointer;
 }
 
 .group{
@@ -27,6 +28,64 @@ button{
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
+
+.chat{
+    flex: 9;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    border: 3px solid darkgreen;
+}
+
+.user{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user p{
+    background-color: lightgreen;
+    padding: 15px;
+    border-radius: 20px;
+    color: darkgreen;
+    max-width: 50%;
+    text-wrap: wrap;
+    word-break: break-all;
+    position: relative;
+}
+
+.user p h5{
+    text-align: end;
+}
+
+
+
+.sender{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sender p{
+    background-color: darkgreen;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    text-wrap: wrap;
+    word-break: break-all;
+}
+
+.input{
+    flex: 1;
+}
+

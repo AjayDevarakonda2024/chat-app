@@ -39,7 +39,18 @@ const Groups = ({setNavIcon, token})=>{
         },[])
     return(
         <div className="group">
-            <input type="text" ref={ref1} placeholder="enter message.."></input> <button onClick={message}>send</button>
+            <div className="chat">
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+            </div>
+            <div className="input">
+                <input type="text" ref={ref1} placeholder="enter message.."></input> <button onClick={message}>send</button>
+            </div>
         </div>
     )
 }
