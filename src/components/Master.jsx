@@ -11,6 +11,7 @@ const Master = ()=>{
         <>
         <Routes>
             <Route path="/app/*" element={<App></App>}></Route>
+            <Route></Route>
 
         </Routes>
         </>
