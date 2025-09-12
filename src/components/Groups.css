@@ -6,11 +6,13 @@ input{
     border-radius: 20px;
     border: none;
     padding: 10px;
+    font-size: 1.2rem;
+    color: #1a4557;
 }
 
 input:focus{
     outline: none;
-    border: 3px solid darkgreen;
+    border: 3px solid #48BBED;
 }
 
 button{
@@ -18,7 +20,7 @@ button{
     height: 50px;
     border-radius: 20px;
     border: none;
-    background-color: darkgreen;
+    background-color: #48BBED;
     color: white;
     cursor: pointer;
 }
@@ -44,7 +46,7 @@ button{
     gap: 4px;
     overflow-y: auto;
     scroll-behavior: smooth;
-    border: 3px solid darkgreen;
+    border: 3px solid #48BBED;
 }
 
 .chat::-webkit-scrollbar{
@@ -58,10 +60,10 @@ button{
 }
 
 .user p{
-    background-color: lightgreen;
+    background-color: #1a4557;
     padding: 15px;
     border-radius: 20px;
-    color: darkgreen;
+    color: white;
     max-width: 50%;
     text-wrap: wrap;
     word-break: break-all;
@@ -81,10 +83,11 @@ button{
 }
 
 .sender p{
-    background-color: darkgreen;
+    background-color: #48BBED;
     padding: 10px;
     border-radius: 20px;
     color: white;
+    max-width: 50%;
     text-wrap: wrap;
     word-break: break-all;
 }

@@ -5,7 +5,18 @@
     align-items: center;
     gap: 20px;
     height: 100dvh;
-    color: darkgreen;
+    color: #48BBED;
+}
+
+.Login img{
+    width: 100px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    animation: bounce 3s ease ;
+}
+
+.Login h1{
+    margin: 0;
 }
 
 .box{
@@ -15,20 +26,33 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border: 5px solid darkgreen;
+    border: 5px solid #48BBED;
     padding: 10px;
     border-radius: 20px;
-    background-color: lightgreen;
+    transition: all 0.5s ease;
+    animation: bounce 3s ease ;
 }
 
 .box input{
-    border: 3px solid darkgreen;
+    border: 3px solid #48BBED;
     box-shadow: 5px 5px 20px ;
     font-size: 1.2rem;
-    color: darkgreen;
+    color: #48BBED;
 }
 
 .box button{
     width: 60%;
     font-size: 1.2rem;
+    background-color: #48BBED;
+}
+
+
+@keyframes bounce {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }

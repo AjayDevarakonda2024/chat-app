@@ -1,6 +1,6 @@
 {
-  "name": "Whats Up",
-  "short_name": "What'sup",
+  "name": "Pluto",
+  "short_name": "Pluto",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",

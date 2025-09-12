@@ -6,6 +6,7 @@ const Groups = ({setNavIcon, token})=>{
     const [userMsg, setUserMsg] = useState([])
     const name = localStorage.getItem("username")
     const ref1 = useRef(null)
+    const chatRef = useRef(null)
 
     const putmessage = async(usname, msg)=>{
         const res = await axios.post(
@@ -62,7 +63,13 @@ const Groups = ({setNavIcon, token})=>{
             const interval = setInterval(usermessage, 3000) // fetch every 3s
 
              return () => clearInterval(interval)
-        },[])
+    },[])
+
+    useEffect(() => {
+        chatRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [userMsg]);
+
+
     return(
         <div className="group">
             <div className="chat">
@@ -71,12 +78,12 @@ const Groups = ({setNavIcon, token})=>{
                     userMsg.map((element, index)=>{
                         return(
                             name == element.user ? (
-                                <div key={index} className="user">
+                                <div key={index} className="user" ref={chatRef}>
                                     <p><h5>{element.user}</h5>{element.message}</p>
                                     
                                 </div>
                             ):(
-                                <div key={index} className="sender">
+                                <div key={index} className="sender" ref={chatRef}>
                                     <p><h5>{element.user}</h5>{element.message}</p>
                                 </div>
                             )

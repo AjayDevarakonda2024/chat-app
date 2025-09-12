@@ -54,7 +54,8 @@ const Login = ({userName, setUserName})=>{
     }
     return(
         <div className="Login">
-            <h1>WELCOME</h1>
+            <img src="./whats app.png"></img>
+            <h1>pLuTo !</h1>
         <div className="box">
             <h2>username</h2>
             <p className="entername">{error}</p>
