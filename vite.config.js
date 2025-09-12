@@ -9,8 +9,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Whats Up',
-        short_name: 'WhatsUp',
+        name: 'Pluto',
+        short_name: 'Pluto',
         icons: [
           { src: '/whats app.png', sizes: '192x192', type: 'image/png' },
           { src: '/whats app.png', sizes: '512x512', type: 'image/png' }
