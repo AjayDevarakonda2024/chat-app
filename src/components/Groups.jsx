@@ -56,6 +56,54 @@ const Groups = ({setNavIcon, token})=>{
                     <p><h5>user</h5>Nothing..</p>
                 </div>
 
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
                 
             </div>
             <div className="input">
