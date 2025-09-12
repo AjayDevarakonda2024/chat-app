@@ -15,7 +15,7 @@ const Groups = ({setNavIcon, token})=>{
                 const res = await axios.post(
                     "https://chat-app-backend-2-hk56.onrender.com/notifications/send-to-all",
                     {
-                    "title": "user",
+                    "title": "Ajay",
                     "body": ref1.current.value
                     },
                     {
@@ -47,6 +47,16 @@ const Groups = ({setNavIcon, token})=>{
                 <div className="sender">
                     <p><h5>user</h5>Nothing..</p>
                 </div>
+
+                <div className="user">
+                    <p><h5>user</h5>emchesthunnav lorem*15</p>
+                    
+                </div>
+                <div className="sender">
+                    <p><h5>user</h5>Nothing..</p>
+                </div>
+
+                
             </div>
             <div className="input">
                 <input type="text" ref={ref1} placeholder="enter message.."></input> <button onClick={message}>send</button>

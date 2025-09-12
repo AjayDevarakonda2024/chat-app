@@ -1,10 +1,17 @@
-.app{
-    background-color: darkgreen;
-    min-height: 100dvh;
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent unwanted scrolling */
 }
 
+.app {
+    background-color: darkgreen;
+    ;
+    display: flex;
+    flex-direction: column;
+}
 
-.header{
+.header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -17,23 +24,22 @@
     z-index: 1;
 }
 
-.header .you1 i{
+.header .you1 i {
     font-size: 2rem;
     cursor: pointer;
     color: darkgreen;
 }
 
-.header .you2 i{
+.header .you2 i {
     font-size: 2rem;
     cursor: pointer;
     color: transparent;
-    -webkit-text-stroke: 3px darkgreen
+    -webkit-text-stroke: 3px darkgreen;
 }
 
-.body{
+.body {
     background-color: lightgreen;
     padding: 10px;
-    height: calc(100dvh - 50px);
-    gap: 20px;
+    height: calc(var(--vh, 1vh) * 100 - 50px);
+    overflow-y: auto; /* Allow scrolling within body if needed */
 }
-

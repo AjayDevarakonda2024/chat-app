@@ -47,6 +47,10 @@ button{
     border: 3px solid darkgreen;
 }
 
+.chat::-webkit-scrollbar{
+    display: none;
+}
+
 .user{
     width: 100%;
     display: flex;

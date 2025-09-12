@@ -1,8 +1,11 @@
 import { useEffect } from "react";
+import './Login.css'
 
 const Login = ({setNavIcon})=>{
     return(
-        <h1>Menu Coming Soon</h1>
+        <div className="Login">
+        <h1>Login Coming Soon</h1>
+        </div>
     )
 }
 
