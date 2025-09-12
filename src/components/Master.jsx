@@ -11,7 +11,6 @@ const Master = ()=>{
     useEffect(()=>{
         if(localStorage.getItem("username")){
             const username = localStorage.getItem("username")
-            setUserName(username)
             const verrifiy = async ()=>{
                 const res = await axios.get(
                     "https://chat-app-usernames.onrender.com/users"
@@ -32,14 +31,14 @@ const Master = ()=>{
             verrifiy()
         }
         else{
-            navigate("/app")
+            navigate("/login")
         }
-    },[])
+    },[userName])
     return(
         <>
         <Routes>
             <Route path="/app/*" element={<App></App>}></Route>
-            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/login" element={<Login userName = {userName} setUserName={setUserName}></Login>}></Route>
 
         </Routes>
         </>
