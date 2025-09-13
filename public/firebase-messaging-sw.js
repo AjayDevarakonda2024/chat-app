@@ -33,7 +33,7 @@ messaging.onBackgroundMessage((payload) => {
     body: payload.notification.body,
     icon: payload.notification.image,
     data: {
-      url: payload.fcmOptions?.link || "/", // ✅ Save target URL
+      url: payload.notification?.link || "/", // ✅ Save target URL
     },
   };
 
