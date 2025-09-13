@@ -61,7 +61,8 @@ button{
 
 .user p{
     background-color: #1a4557;
-    padding: 15px;
+    padding: 10px;
+    padding-top: 5px;
     border-radius: 10px;
     color: white;
     max-width: 50%;
@@ -72,6 +73,7 @@ button{
 
 .user p h5{
     text-align: end;
+    margin-bottom: 2px;
 }
 
 
