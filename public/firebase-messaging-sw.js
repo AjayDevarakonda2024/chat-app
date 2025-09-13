@@ -28,12 +28,12 @@ messaging.onBackgroundMessage((payload) => {
     payload
   );
   // Customize notification here
-  const notificationTitle = payload.notification.title;
+  const notificationTitle = payload.data.title;
   const notificationOptions = {
-    body: payload.notification.body,
-    icon: payload.notification.image,
+    body: payload.data.body,
+    icon: "./whats app.png",
     data: {
-      url: payload.notification?.link || "/", // ✅ Save target URL
+      url: payload.data.link || "/", // ✅ Save target URL
     },
   };
 
