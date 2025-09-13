@@ -31,7 +31,7 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.data.title;
   const notificationOptions = {
     body: payload.data.body,
-    icon: "./whats app.png",
+    icon: "/whats app.png",
     data: {
       url: payload.data.link || "/", // ✅ Save target URL
     },
