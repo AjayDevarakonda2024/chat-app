@@ -12,7 +12,7 @@ firebase.initializeApp({
   apiKey: "AIzaSyCpEfUV8L8RiRUST-NiSNM5fJZuGTsJjSI",
   authDomain: "push-notifications-be506.firebaseapp.com",
   projectId: "push-notifications-be506",
-  storageBucket: "push-notifications-be506.firebasestorage.app",
+  storageBucket: "push-notifications-be506.appspot.com",
   messagingSenderId: "261901199823",
   appId: "1:261901199823:web:82da6e41baea0fd30ecaba",
   measurementId: "G-G54V2R3C1R"
