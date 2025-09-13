@@ -3,7 +3,7 @@
 input{
     height: 50px;
     width: 250px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     padding: 10px;
     font-size: 1.2rem;
@@ -18,7 +18,7 @@ input:focus{
 button{
     width: 60px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     background-color: #48BBED;
     color: white;
@@ -39,11 +39,11 @@ button{
     flex: 9;
     background-color: white;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 1px;
     overflow-y: auto;
     scroll-behavior: smooth;
     border: 3px solid #48BBED;
@@ -62,7 +62,7 @@ button{
 .user p{
     background-color: #1a4557;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
     max-width: 50%;
     text-wrap: wrap;
@@ -85,11 +85,17 @@ button{
 .sender p{
     background-color: #48BBED;
     padding: 10px;
-    border-radius: 20px;
+    padding-top: 5px;
+    border-radius: 10px;
     color: white;
     max-width: 50%;
     text-wrap: wrap;
     word-break: break-all;
+}
+
+.sender p h5{
+    margin: 0;
+    margin-bottom: 2px;
 }
 
 .input{
