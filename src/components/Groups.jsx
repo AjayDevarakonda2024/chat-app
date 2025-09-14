@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useRef, useState } from "react"
 import './Groups.css'
 
-const Groups = ({setNavIcon, token})=>{
+const Groups = ({setNavIcon, token, setLoading})=>{
     const [userMsg, setUserMsg] = useState([])
     const name = localStorage.getItem("username")
     const ref1 = useRef(null)
@@ -57,6 +57,7 @@ const Groups = ({setNavIcon, token})=>{
                 let {data} = res
                 console.log(data)
                 setUserMsg(data)
+                setLoading(false)
             }
             usermessage()
 

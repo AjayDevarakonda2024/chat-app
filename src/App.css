@@ -6,9 +6,37 @@ html, body, #root {
 
 .app {
     background-color: #48BBED;
-    ;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.loading1{
+    height: 80px;
+    width: 80px;
+    background: url("/whats app.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: rotate 1.5s ease 0s infinite;
+
+}
+
+.loading1 p{
+    position: absolute;
+    top: 110%;
+    font-size: 1.5rem;
+    animation: none;
+    color: #48BBED;
+}
+
+.loading2{
+    display: none;
 }
 
 .header {
@@ -48,4 +76,19 @@ html, body, #root {
     padding: 10px;
     height: calc(var(--vh, 1vh) * 100 - 50px);
     overflow-y: auto; /* Allow scrolling within body if needed */
+}
+
+
+@keyframes rotate {
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
 }
