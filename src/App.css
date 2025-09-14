@@ -56,6 +56,8 @@ html, body, #root {
     width: 13%;
     border-radius: 50%;
     margin-top: 5px;
+    animation: rotate1 2s linear 0s infinite;
+
 }
 
 .header .you1 i {
@@ -68,7 +70,6 @@ html, body, #root {
     font-size: 2rem;
     cursor: pointer;
     color: white;
-    -webkit-text-stroke: 1px #48BBED;
 }
 
 .body {
@@ -89,6 +90,17 @@ html, body, #root {
     }
     100%{
         opacity: 0;
+    }
+    
+}
+
+@keyframes rotate1 {
+    0%{
+        rotate: 0deg;
+
+    }
+    100%{
+        rotate: 360deg;
     }
     
 }

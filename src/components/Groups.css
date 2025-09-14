@@ -46,7 +46,6 @@ button{
     gap: 1px;
     overflow-y: auto;
     scroll-behavior: smooth;
-    border: 3px solid #48BBED;
 }
 
 .chat::-webkit-scrollbar{
