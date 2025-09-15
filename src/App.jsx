@@ -24,11 +24,39 @@ function App({setLoading}) {
     console.log(res.data)
   }
 
+  const savingUserToken = async (token)=>{
+
+    const userTokens = async()=>{
+        const res = await axios.get(
+            "https://chat-app-username-tokens-1.onrender.com/userTokens"
+
+        )
+        let {data} = res;
+        console.log(data)
+        const exists = data.some((element)=>element.username === localStorage.getItem("username") && element.token === token)
+        if(exists){
+          console.log("name and token already exists")
+        }
+        else{
+              const res = await axios.post(
+                "https://chat-app-username-tokens-1.onrender.com/userTokens",
+                {
+                  "username": localStorage.getItem("username"),
+                  "token": token
+                }
+              )
+        }
+    }
+
+    userTokens()
+  }
+
   useEffect(()=>{
     const fetchToken = async ()=>{
       const t = await generateToken();
       setToken(t)
       await savingToken(t)
+      await savingUserToken(t)
     }
 
     fetchToken()

@@ -18,13 +18,12 @@ const You = ({setNavIcon})=>{
     }
     useEffect(()=>{
             setNavIcon("you")
-            userTokens()
         },[])
     return(
         <div className="You">
             <div className="chat_list">
                 {
-                    findName.filter((element)=>element.username == name.current.value).map((element, index)=>{
+                    findName.filter((element)=>element.username.toLowerCase().includes(name.current.value.toLowerCase())).map((element, index)=>{
                         return(
                             <Link to="single" className="Link" key={index}>{element.username}</Link>
                         )
