@@ -79,18 +79,19 @@ const Groups = ({setNavIcon, token, setLoading})=>{
                     userMsg.map((element, index)=>{
                         return(
                             name == element.user ? (
-                                <div key={index} className="user" ref={chatRef}>
+                                <div key={index} className="user" >
                                     <p><h5>{element.user}</h5>{element.message}</p>
                                     
                                 </div>
                             ):(
-                                <div key={index} className="sender" ref={chatRef}>
+                                <div key={index} className="sender" >
                                     <p><h5>{element.user}</h5>{element.message}</p>
                                 </div>
                             )
                         )
                     })
                 }
+                <div ref={chatRef} />
 
             </div>
             <div className="input">

@@ -1,7 +1,37 @@
 .You{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: white;
     height: 100%;
+}
+
+.chat_list{
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.search_user{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #1a4557;
+    width: 100%;
+}
+
+.Link{
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    color: #1a4557;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
 }

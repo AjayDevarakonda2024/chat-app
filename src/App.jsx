@@ -7,6 +7,7 @@ import You from './components/You'
 import Groups from './components/Groups'
 import Menu from './components/Menu'
 import axios from 'axios'
+import OneToOne from './components/OneToOne'
 
 function App({setLoading}) {
   const [token, setToken] = useState("")
@@ -53,6 +54,7 @@ function App({setLoading}) {
             <Route path='you' element={<You setNavIcon={setNavIcon}></You>}></Route>
             <Route index element={<Groups setNavIcon={setNavIcon} token={token} setLoading={setLoading}></Groups>}></Route>
             <Route path='menu' element={<Menu setNavIcon={setNavIcon}></Menu>}></Route>
+            <Route path="you/single" element={<OneToOne></OneToOne>}></Route>
           </Routes>
         </div>
         </div>

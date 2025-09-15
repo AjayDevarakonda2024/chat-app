@@ -39,7 +39,6 @@ button{
     flex: 9;
     background-color: white;
     width: 100%;
-    border-radius: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
