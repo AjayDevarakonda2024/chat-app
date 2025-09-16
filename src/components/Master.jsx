@@ -9,7 +9,6 @@ const Master = ()=>{
     const navigate = useNavigate() 
     const [userName, setUserName] = useState("")
     const [userData, setUserData] = useState([])
-    const [loading, setLoading] = useState(true)
     useEffect(()=>{
         if(localStorage.getItem("username")){
             const username = localStorage.getItem("username")
@@ -38,11 +37,8 @@ const Master = ()=>{
     },[userName])
     return(
         <>
-        <div className={loading? "loading1": "loading2"}>
-          <p>Loading..</p>
-        </div>
         <Routes>
-            <Route path="/app/*" element={<App setLoading={setLoading}></App>}></Route>
+            <Route path="/app/*" element={<App></App>}></Route>
             <Route path="/login" element={<Login userName = {userName} setUserName={setUserName}></Login>}></Route>
 
         </Routes>

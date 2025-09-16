@@ -9,9 +9,10 @@ import Menu from './components/Menu'
 import axios from 'axios'
 import OneToOne from './components/OneToOne'
 
-function App({setLoading}) {
+function App() {
   const [token, setToken] = useState("")
   const [navIcon, setNavIcon] = useState("groups")
+  const [loading, setLoading] = useState(true)
 
   const savingToken = async (token)=>{
     console.log(token)
@@ -71,6 +72,9 @@ function App({setLoading}) {
   return (
     <>
       <div className='app'>
+        <div className={loading? "loading1": "loading2"}>
+          <p>Loading..</p>
+        </div>
       <div className='header'>
         <img src='./whats app.png' ></img>
         <Link to="you" className={navIcon == "you"? "you1":"you2"} onClick={()=>setNavIcon("you")}><i className='fa fa-user'></i></Link>
