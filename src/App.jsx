@@ -86,7 +86,7 @@ function App() {
             <Route path='you' element={<You setNavIcon={setNavIcon}></You>}></Route>
             <Route index element={<Groups setNavIcon={setNavIcon} token={token} setLoading={setLoading}></Groups>}></Route>
             <Route path='menu' element={<Menu setNavIcon={setNavIcon}></Menu>}></Route>
-            <Route path="you/single" element={<OneToOne></OneToOne>}></Route>
+            <Route path="you/single/:usernsme/:token" element={<OneToOne></OneToOne>}></Route>
           </Routes>
         </div>
         </div>

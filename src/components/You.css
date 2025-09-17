@@ -22,16 +22,28 @@
     gap: 5px;
     background-color: #1a4557;
     width: 100%;
+    position: relative;
 }
 
 .Link{
     height: 50px;
     width: 100%;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 1px solid #48BBED;
     color: #1a4557;
     text-decoration: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
+}
+
+.search{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    position: absolute;
+    bottom: 105%;
+    z-index: 101;
+    border-radius: 10px;
+    box-shadow: 0 0 15px ;
 }

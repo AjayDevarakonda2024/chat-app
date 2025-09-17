@@ -24,15 +24,18 @@ const You = ({setNavIcon})=>{
     return(
         <div className="You">
             <div className="chat_list">
-                {search.length > 0 && filterdUsers.length > 0 ? (
-                    filterdUsers.map((element, index)=>{
-                        return(
-                            <Link to="single" className="Link" key={index}>{element.username}</Link>
-                        )
-                    })): search.length > 0 && filterdUsers.length <= 0 ?<Link className="Link">user not found</Link>:<Link className="Link">search</Link>
-                }
+                
             </div>
             <div className="search_user">
+                <div className="search">
+                    {search.length > 0 && filterdUsers.length > 0 ? (
+                        filterdUsers.map((element, index)=>{
+                            return(
+                                <Link to={`single/${element.username}/${element.token}`} className="Link" key={index}>{element.username}</Link>
+                            )
+                        })): search.length > 0 && filterdUsers.length <= 0 ?<Link className="Link">user not found</Link>:""
+                    }
+                </div>
                 <input type="text" placeholder="search user" value={search} onChange={(e)=>setSearch(e.target.value)}></input>
                 <button onClick={userTokens}>search</button>
             </div>
