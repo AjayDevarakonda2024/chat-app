@@ -7,6 +7,7 @@ const You = ({setNavIcon})=>{
     const [search, setSearch] = useState("")
     const navigate = useNavigate()
     const user = localStorage.getItem("username")
+    const [msgData, setMsgData] = useState([])
     const userTokens = async()=>{
         const res = await axios.get(
             "https://chat-app-username-tokens-1.onrender.com/userTokens"
@@ -16,14 +17,36 @@ const You = ({setNavIcon})=>{
         console.log(data)
         setFindName(data)
     }
+
+    const getmsgs = async ()=>{
+        const res = await axios.get(
+            "https://chat-app-onetoone.onrender.com/oneToOne",
+        )
+        console.log(res);
+        let {data} = res
+        setMsgData(data)
+        
+    }
+
+    useEffect(()=>{
+        getmsgs()
+    },[])
+
     useEffect(()=>{
             setNavIcon("you")
             userTokens()
-        },[])
+    },[])
     const filterdUsers = findName.filter((element)=>element.username.toLowerCase().includes(search.toLowerCase()))
     return(
         <div className="You">
             <div className="chat_list">
+                {
+                    msgData.map((element,index)=>{
+                        return(
+                            element.sender == user? <div key={index}><Link to={`single/${element.receiver}/${element.receiver_token}`} className="Link">{element.receiver}</Link></div>: ""
+                        )
+                    })
+                }
                 
             </div>
             <div className="search_user">

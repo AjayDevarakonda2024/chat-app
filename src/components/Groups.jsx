@@ -63,7 +63,7 @@ const Groups = ({setNavIcon, token, setLoading})=>{
 
             const interval = setInterval(usermessage, 3000) // fetch every 3s
 
-             return () => clearInterval(interval)
+            return () => clearInterval(interval)
     },[])
 
     useEffect(() => {
